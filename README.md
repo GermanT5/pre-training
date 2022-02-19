@@ -516,6 +516,12 @@ We performed minor changes compared to the official *GIN* configuration:
 * `pack_dataset.use_custom_ops` is set to `False`, because otherwise an own-compiled Tensor2Tensor Ops package needs to be installed. We currently have no idea of how to do this, because it is undocumented, see this [issue](https://github.com/tensorflow/tensor2tensor/issues/1846) for more information.
 * `run.save_checkpoints_steps` is set to 50,000 steps.
 
+More configurations for our model trainings can be found here:
+
+| Configuration | Link
+| ------------- | --------------------------------------------------------------------------------
+| Small 32EL    | [GIN configuration](configurations/t5-efficient-small-el32/operative_config.gin)
+
 # Create TPU
 
 In the next, we need to create a TPU for pre-training. Please adjust your `zone` (mentioned in the email from TRC) and your TPU type (v3-8 is used here):
